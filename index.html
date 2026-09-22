@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Website & Lead Audit | Circuits Electrical</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+.agnav{position:sticky;top:0;z-index:60;background:rgba(13,17,23,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.agnav .inner::-webkit-scrollbar{display:none}
+.agnav a{flex:0 0 auto;padding:13px 12px;font-size:13.5px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.agnav a:hover{color:var(--ink)}
+.agnav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+.agnav a.ext{opacity:.8}
+@media(max-width:640px){.agnav .inner{padding:0 14px}.agnav a{padding:12px 10px;font-size:13px}}
+</style></head><body><nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="./" class="on">Audit</a><a href="competitors.html">Competitors</a></div></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Website &amp; Lead Audit &middot; Circuits Electrical Ltd &middot; Swinton, South Yorkshire</div>
+    <div class="sub">Prepared for Christopher Speight &middot; 23 September 2026 &middot; AG1 Consulting</div>
+    <h1>Your Website Still Says "Tagline" Where The Company Description Should Be.</h1>
+
+    <div class="hero">
+      <div class="gradecard gc-F">
+        <div class="bigletter bl-F" style="font-size:44px">856</div>
+        <div class="score100">words across your entire website, all six pages</div>
+      </div>
+      <div class="heroread">
+        <h2>You want more commercial and industrial work. That is exactly the buyer who checks a website before they invite you to quote.</h2>
+        <p>The tab at the top of your homepage currently reads <b>"CIrcuits Electrical &ndash; Tagline"</b>. "Tagline" is
+        the placeholder WordPress ships with. <b>Your commercial page is 168 words long and lives at an address that
+        reads ?page_id=401.</b></p>
+        <div class="tag">All six pages read 22 September 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 1 &mdash; The Title Tag, Which Is The First Thing Anyone Sees</div>
+    <div class="code">
+What the browser tab and Google both show:
+
+  <span class="ph">CIrcuits Electrical &ndash; Tagline</span>
+
+Two separate problems in five words:
+
+  <span class="ph">"Tagline"</span>   the WordPress default placeholder, never replaced
+  <span class="ph">"CIrcuits"</span>  a capital I in the middle of your own company name
+
+What it should say:
+
+  <span class="ok">Commercial &amp; Industrial Electrical Contractors | Rotherham &amp; South Yorkshire</span>
+    </div>
+    <div class="flag">
+      <div class="lab">This is the single line Google shows in its results</div>
+      <p>Before anybody reads a word of your site, they see that tab. <b>"Tagline" tells a facilities manager that
+      nobody has looked at this website in a very long time</b> &mdash; and the typo in your own name is the kind of
+      detail a careful buyer notices and quietly holds against you.</p>
+      <p>It is a ten-minute fix. It has been there for years.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 2 &mdash; Your Web Addresses Contain No Words At All</div>
+    <div class="code">
+Every page on your site:
+
+  Home          <span class="ok">circuitselectrical.co.uk/</span>
+  About Us      <span class="ph">circuitselectrical.co.uk/?page_id=398</span>
+  Domestic      <span class="ph">circuitselectrical.co.uk/?page_id=400</span>
+  Commercial    <span class="ph">circuitselectrical.co.uk/?page_id=401</span>
+  Projects      <span class="ph">circuitselectrical.co.uk/?page_id=558</span>
+  Contact       <span class="ph">circuitselectrical.co.uk/?page_id=79</span>
+
+What they should be:
+
+  <span class="ok">/commercial-electrical-contractors/</span>
+  <span class="ok">/industrial-electrical-installations/</span>
+  <span class="ok">/rotherham/</span>  <span class="ok">/doncaster/</span>  <span class="ok">/sheffield/</span>
+    </div>
+    <div class="warn">
+      <div class="lab">WordPress calls this setting "Plain". It is the one you are on.</div>
+      <p><b>Google reads the words in a web address as a signal of what the page is about.</b> Yours contain a number
+      and nothing else. Your commercial page could be about anything &mdash; the address gives Google nothing to work
+      with.</p>
+      <p>It is a single setting in WordPress, though it needs redirects putting in at the same time so nothing breaks.
+      <b>This is the second cheapest fix on the list and one of the largest.</b></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 3 &mdash; Six Pages, 856 Words, And 168 Of Them Are Your Commercial Offer</div>
+    <div class="code">
+  Home          <span class="ph">130 words</span>
+  About Us      <span class="ph">212 words</span>
+  Commercial    <span class="ph">168 words</span>   &lt;&lt;&lt; the work you want more of
+  Projects      <span class="ph">161 words</span>
+  Domestic      <span class="ph">133 words</span>
+  Contact       <span class="ph">52 words</span>
+
+  Whole site    <span class="ph">856 words</span>
+
+  Pages naming a town you serve:   <span class="ph">0</span>
+  Rotherham, Doncaster, Sheffield, Barnsley, Mexborough
+    </div>
+    <div class="flag">
+      <div class="lab">A main contractor cannot tell what you are capable of</div>
+      <p>168 words is shorter than this section. <b>There is nothing about the size of job you take, the sectors you
+      work in, your team, your certifications, or a single named project</b> &mdash; even though you have a page
+      called Projects.</p>
+      <p>You described yourselves as providing "a nationwide service to both commercial and domestic customers". <b>A
+      buyer reading 168 words cannot distinguish you from a one-man band</b>, and you have four or five people.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 4 &mdash; The Copyright Says 2017</div>
+    <div class="code">
+At the foot of every page:
+
+  <span class="ph">Circuits Electrical Ltd &copy; 2017 | All Rights Reserved</span>
+
+Elsewhere on the site:
+
+  <span class="ph">"providing a nationwide services"</span>   (grammar, on the homepage)
+  <span class="ph">No enquiry form except on Contact</span>   (52 words long)
+  <span class="ph">No tappable phone link anywhere</span>     01709 590994 is plain text
+    </div>
+    <div class="warn">
+      <div class="lab">Nine years is a long time for a date to sit wrong</div>
+      <p>It is a tiny detail and it does real damage. <b>A procurement officer checking three contractors sees 2017 and
+      wonders whether you are still trading.</b> Combined with "Tagline" in the title, the impression is a business that
+      has stopped paying attention.</p>
+      <p>We do not believe that is true of you &mdash; you have four or five people and you are looking to grow.
+      <b>That is precisely why the gap matters.</b></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 5 &mdash; Nothing Is Measured, And No Accreditation Is Shown</div>
+    <div class="code">
+Tracking across all six pages:
+
+  Google Analytics      <span class="ph">not found</span>
+  Google Tag Manager    <span class="ph">not found</span>
+  Google Ads tag        <span class="ph">not found</span>
+  Meta pixel            <span class="ph">not found</span>
+  Structured data       <span class="ph">none of any kind</span>
+  Meta description      <span class="ph">none</span>
+
+Accreditations displayed on your site:
+
+  NICEIC / NAPIT / ELECSA     <span class="ph">none found</span>
+  CHAS                        <span class="ph">none found</span>
+  SafeContractor              <span class="ph">none found</span>
+  Constructionline            <span class="ph">none found</span>
+    </div>
+    <div class="flag">
+      <div class="lab">This is the finding that matters most for commercial work</div>
+      <p><b>Three of the four South Yorkshire competitors we checked display accreditations.</b> S &amp; G Electrical
+      shows NICEIC and CHAS. HEC shows NICEIC and CHAS. A Coole shows CHAS and SafeContractor.</p>
+      <p><b>CHAS, SafeContractor and Constructionline are not decoration on commercial work &mdash; they are frequently
+      the gate.</b> Plenty of main contractors and public bodies will not add a firm to a tender list without one.</p>
+      <p><b>We are not saying you do not hold them.</b> We cannot tell, because your website does not say. And that is
+      the point: <b>if you hold them, they are invisible to every buyer who checks. If you do not, that is the bigger
+      conversation</b> &mdash; and it is the first thing we would want to know.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Scorecard</div>
+    <div class="grid">
+      <div class="row"><div><div class="rname">Title tag</div><div class="sc">Reads "Tagline", plus a typo in your own name</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">URL structure</div><div class="sc">?page_id=401 &mdash; no words in any address</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Measurement</div><div class="sc">No analytics, tags or pixel of any kind</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Structured data</div><div class="sc">None &mdash; no business type, address or hours</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Accreditation shown</div><div class="sc">None displayed; 3 of 4 rivals show theirs</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Site depth</div><div class="sc">6 pages, 856 words in total</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Town coverage</div><div class="sc">No page for any town you work in</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Conversion</div><div class="sc">One form; no tappable phone number</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Contact details</div><div class="sc">Landline, mobile, two named emails, real address</div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">The business itself</div><div class="sc">4&ndash;5 electricians, commercial and industrial capable</div></div><div class="badge gA">A</div></div>
+    </div>
+    <div class="tag" style="margin-top:12px">Read the last row against the rest. The firm is real and the website is nine years behind it.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Would Do, In Order</div>
+    <ul class="road">
+      <li><b>Fix the title, the copyright and the typo.</b> Half an hour of work that changes the first impression of
+      every visitor and every search result.</li>
+      <li><b>Turn the addresses into words</b> and redirect the old ones, so a commercial page actually says
+      "commercial" in its address.</li>
+      <li><b>Put your credentials on the site</b> &mdash; whichever of NICEIC, CHAS, SafeContractor or Constructionline
+      you hold, with the registration numbers. This is the one that unlocks tender work.</li>
+      <li><b>Write the commercial and industrial pages properly</b> &mdash; sectors, job sizes, named projects, team
+      size, insurance levels. 168 words becomes a page a buyer can act on.</li>
+      <li><b>Then build the towns and put the meter on</b>, so you can see which work is coming from where.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>You have four or five electricians and a website that reads like a placeholder.</h2>
+    <p>Commercial buyers check. That is the entire gap between the work you get and the work you want.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 23 September 2026<br><br>
+    For Christopher Speight, Circuits Electrical Ltd, Swinton, South Yorkshire. <b>Every statement about the website was
+    read directly from circuitselectrical.co.uk's own served pages on 22 September 2026</b> &mdash; the six pages and
+    their word counts, the "CIrcuits Electrical &ndash; Tagline" title tag, the ?page_id= addresses, the "&copy; 2017"
+    footer, the "nationwide services" wording, the absence of any analytics, tag manager, advertising tag, pixel,
+    structured data or meta description, the absence of a tel: link, and the single enquiry form on the contact page.
+    <b>Items recorded as "not found" describe what a static read of the served HTML returned on that date and must not be
+    read as proof of absence</b>; content rendered by JavaScript after loading may not appear in such a check. <b>⚠ We
+    make no claim whatsoever about which accreditations Circuits Electrical Ltd does or does not hold &mdash; only that
+    none is displayed on the website. The company may hold any or all of them.</b> Competitor accreditations, page
+    counts, tracking and structured data were read from those firms' own served pages and published sitemaps on the same
+    date and are as each firm publishes them, unverified with NICEIC, CHAS, SafeContractor, Constructionline or any other
+    body. <b>Statements about accreditation being required for tender lists are general commercial observations, not
+    advice about any specific scheme, buyer or procurement process, and requirements vary by client and contract.</b> The
+    team size and the wish for more commercial and industrial work are as reported to AG1 and have not been independently
+    verified. <b>No enquiry volume, ranking, tender outcome, contract, cost per lead or revenue result is forecast or
+    promised anywhere in this document</b>, and nothing here is a comment on the competence, workmanship, licensing or
+    insurance of this or any other business. Nothing here is legal, procurement or business advice. Company and scheme
+    names are used for identification only and belong to their respective owners. The grades are AG1's own editorial
+    assessment.
+  </div>
+</footer>
+</body></html>
